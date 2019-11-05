@@ -45,8 +45,9 @@
                 <li class="nav-item">
                 <% else %>           
                   
-                  <!-- on appelle la methode destroy du controller sessions-->
-                 <%= link_to "Se deconnecter",destroy_user_session_path, :class => "nav-link", method: :delete %>
+                  <!-- on appelle la methode destroy du controller sessions      destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
+-->
+                 <%= link_to "Se deconnecter",destroy_user_session_path, :class => "nav-link", method: :delete %> 
 
               <% end %>
            </li>
