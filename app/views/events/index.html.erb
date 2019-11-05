@@ -8,7 +8,7 @@
 <body>
   <h1> --- WELCOME IN EVENT BRITE A TOULOUSE --- </h1>
   <% if user_signed_in? %> <!-- ICI ON CALE NOTRE HELPER user_signed_in?dans l ancien projet c est le hash session avec la condition if session[:user_id] -->
-  <h1> CHER(E)<%= current_user.email %>  </h1>
+  <h1> cher(e) <%= current_user.email %>  </h1>
    <%end%>
 
   <!-- ici on cree le bouton qui clique va nous amener au formulaire -->
@@ -22,7 +22,8 @@
         <div class="card-body">
           <h5 class="card-title">Titre de l event : <%= event.title %></h5>
          <p> Lieu : <%=event.location%> </p>
-               <%= link_to 'Voir', event_path(event.id), class: 'btn btn-secondary bg-info' %>
+               <%= link_to 'Voir', event_path(event.id), class: 'btn btn-secondary bg-info' %> <!--    event GET    /events/:id(.:format)                                                                    events#show ca nous renvoie a def show de events_controller ou on va recuperer l evenement particulier grace a find, et ensuite executer la view show.html.erb de  la view event
+-->
           <div class="card-footer"> </div>
         </div>
       </div>

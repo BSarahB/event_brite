@@ -1,0 +1,19 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-success">Infos de l evenement <%=@event.title %></h1>
+  </div>
+</div>
+
+<div class="card-columns border-info container bg-info">
+
+  <p><strong class="text-warning">Titre : </strong>   <%=@event.title %><br/>
+  <strong class="text-warning">Description: </strong> <%=@event.description %><br/>
+  <strong class="text-warning">Date : </strong>       <%=@event.start_date.strftime %> <br/>
+  <strong class="text-warning">Durée : </strong>      <%=@event.duration %> min <br/>
+  <strong class="text-warning">Fin à : </strong>       <%=@event.end_date %><br/>
+  <strong class="text-warning">Lieu : </strong>       <%=@event.location%><br/>
+  <strong class="text-warning">Prix : </strong>       <%=@event.price%> €<br/>
+        
+  
+</div>
+
