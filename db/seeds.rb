@@ -7,10 +7,11 @@ end
 puts "2 utilisateurs crees"
 
 
-2.times do  |index|    
-       Event.create!(title: "Event#{index}", description: Faker::ChuckNorris.fact, admin: User.all.sample, location: Faker::Address.full_address, price: rand(1..10)*5, duration: rand(1..10)*5, start_date: Faker::Date.forward(days: 100))
+2.times do     
+      # Event.create!(title: "Event#{index}", description: Faker::ChuckNorris.fact, admin: User.all.sample, location: Faker::Address.full_address, price: rand(1..10)*5, duration: rand(1..10)*5, start_date: Faker::Date.forward(days: 100))
+#end
+#puts "2 evenements crees"
+  Event.create(start_date: Time.now + 3600*rand(1..100), duration: rand(1..12)*5 , title: "Title test", price: rand(15..900), location: Faker::Address.city, admin: User.all.sample, description: Faker::Lorem.paragraph(sentence_count: 8) )
 end
-puts "2 evenements crees"
-
-
-
+puts "2events crees"
+puts "BDD cree"
