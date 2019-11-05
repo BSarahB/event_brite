@@ -1,0 +1,33 @@
+<html>
+<!-- On met le flash ici pour que dans la view qui affiche les events puisse s executer les codes flash du controller events-->
+<% flash.each do |key, value| %>
+  <div class="alert alert-success" role="alert">
+    <%= value %>
+  </div>
+<% end %>
+<body>
+  <h1> --- WELCOME IN EVENT BRITE A TOULOUSE --- </h1>
+  <% if user_signed_in? %> <!-- ICI ON CALE NOTRE HELPER user_signed_in?dans l ancien projet c est le hash session avec la condition if session[:user_id] -->
+  <h1> CHER(E)<%= current_user.email %>  </h1>
+   <%end%>
+
+  <!-- ici on cree le bouton qui clique va nous amener au formulaire -->
+  <p> <%=link_to "Créer un événement", new_event_path, class: "btn btn-primary btn-lg" %> </p>
+  
+
+  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around; padding-top: 120px">
+    <% @events.each do |event| %>
+      <div class="card text-white bg-secondary mb-3" style="width: 30rem;">
+        <div class="card-header"> Date de l event : <%= event.start_date %> </div>
+        <div class="card-body">
+          <h5 class="card-title">Titre de l event : <%= event.title %></h5>
+         <p> Lieu : <%=event.location%> </p>
+               <%= link_to 'Voir', event_path(event.id), class: 'btn btn-secondary bg-info' %>
+          <div class="card-footer"> </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</body>
+</html>
