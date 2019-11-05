@@ -1,0 +1,40 @@
+
+    <h1 class="display-4">Créer un evenement</h1>
+  
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+  <div class="form-group">
+    <%= label_tag(:title, "Titre :") %>
+    <%= text_field_tag(:title,"", :class => 'form-control')%>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:description, "Description :") %>
+    <%= text_area_tag(:description,"", :class => 'form-control')%>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:location, "Lieu :") %>
+    <%= text_field_tag(:location, "", :class => 'form-control')%>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:price, "Prix :") %>
+    <%= text_field_tag(:price, "", :class => 'form-control')%>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:start_date, "Début:") %>
+    <%= text_field_tag(:start_date, Time.now+1000 , :class => 'form-control')%>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:duration, "Durée:") %>
+    <%= text_field_tag(:duration,"",:class => 'form-control')%>
+  </div>
+
+		<div class="col-sm-12 d-flex justify-content-center  m-3">
+			<%= submit_tag("Confirmer l'évènement", :class => "btn btn-primary") %>
+		</div>
+
+<% end %>

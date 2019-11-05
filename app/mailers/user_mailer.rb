@@ -5,8 +5,8 @@ class UserMailer < ApplicationMailer
     #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
     @user = user 
 
-    #on définit une variable @url qu'on utilisera dans la view d’e-mail
-    @url  = 'http://monsite.fr/login' 
+    #on définit une variable @url qu'on utilisera dans la view d’e-mail view user_mailer ficher welcome_email.html.erb ou text.erb
+    @url  = 'https://polar-escarpment-85363.herokuapp.com/login'                                      #'http://monsite.fr/login' 
 
     # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
     mail(to: @user.email, subject: 'Bienvenue chez nous !') 

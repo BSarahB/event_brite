@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class AddDeviseToUsers < ActiveRecord::Migration[5.2]
-  def self.up
+  def def change
     change_table :users do |t|
       ## Database authenticatable
       #on enleve les lignes que devise a ajoutees nous avons deja ces attributs existants
@@ -44,9 +44,5 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
     # add_index :users, :unlock_token,         unique: true
   end
 
-  def self.down
-    # By default, we don't want to make any assumption about how to roll back a migration when your
-    # model already existed. Please edit below which fields you would like to remove in this migration.
-    raise ActiveRecord::IrreversibleMigration
-  end
+  
 end
