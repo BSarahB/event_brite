@@ -44,7 +44,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 gem "letter_opener", :group => :development
-gem 'rails_12factor', group: :production
 
 
 group :development do

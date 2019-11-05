@@ -1,15 +1,16 @@
 require 'faker'
 
 
-#emprunte
+#creation de user emprunte le mien posait problem (repete error a cause de number)
 #2.times do
-  #first_name = Faker::Name.first_name
-  #last_name = Faker::Name.last_name
+ # first_name = Faker::Name.first_name
+ # last_name = Faker::Name.last_name
   #email = first_name.gsub(' ', '_')+'.'+last_name.gsub(' ', '_')+'@yopmail.com'
   #User.create(first_name: first_name, last_name: last_name, email: email)
 #end
-2.times do |number|             
-       # User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Quote.famous_last_words, email: "Sarah#{number}@yopmail.com", encrypted_password:"password")
+2.times do 
+
+       User.create(first_name: x, last_name: Faker::Name.last_name, description: Faker::Quote.famous_last_words, email: x + "@yopmail.com", encrypted_password:"password")
 end
 puts "2 utilisateurs crees"
 
