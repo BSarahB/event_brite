@@ -1,19 +1,28 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4 text-success">Infos de l evenement <%=@event.title %></h1>
-  </div>
-</div>
+<html>
 
-<div class="card-columns border-info container bg-info">
 
-  <p><strong class="text-warning">Titre : </strong>   <%=@event.title %><br/>
-  <strong class="text-warning">Description: </strong> <%=@event.description %><br/>
-  <strong class="text-warning">Date : </strong>       <%=@event.start_date.strftime %> <br/>
-  <strong class="text-warning">Durée : </strong>      <%=@event.duration %> min <br/>
-  <strong class="text-warning">Fin à : </strong>       <%=@event.end_date %><br/>
-  <strong class="text-warning">Lieu : </strong>       <%=@event.location%><br/>
-  <strong class="text-warning">Prix : </strong>       <%=@event.price%> €<br/>
-        
+  <title>
+      Page Event
+  </title>
+
+  <body>
+
+    <div class="jumbotron">
+
+      <h3>PAGE EVENT</h3>
+        <p>Voici la page de l evenement <%=@event.title %>, cree le <%= @event.created_at %></p> 
+
+          <!-- Affiche les infos de l evenement -->
+        <p class="lead"> Titre : <%=@event.title %> </p>
+        <p class="lead"> Description : <%= @event.description %> </p>
+        <p class="lead"> Titre : <%=@event.title %> </p>
+        <p class="lead"> Date : <%= @event.start_date %> </p>
+        <p class="lead"> Duree : <%=@event.duration %> </p>
+        <p class="lead"> Prix : <%= @event.price %> Euros</p>
+        <p class="lead"> Lieu : <%=@event.location %> </p>
+
   
-</div>
-
+  
+    </div>
+  </body>
+</html>

@@ -9,7 +9,7 @@ require 'faker'
   #User.create(first_name: first_name, last_name: last_name, email: email)
 #end
 2.times do 
-
+x = Faker::Name.first_name
        User.create(first_name: x, last_name: Faker::Name.last_name, description: Faker::Quote.famous_last_words, email: x + "@yopmail.com", encrypted_password:"password")
 end
 puts "2 utilisateurs crees"
