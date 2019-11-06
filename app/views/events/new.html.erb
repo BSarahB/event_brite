@@ -1,4 +1,4 @@
-
+<!--Le formulaire va POINTER vers la methode #create dans le controller events Jamy, nous dit c'est pas super intuitif, mais PAR CONVENTION le POST de création va à /events et non pas /events/new -->
     <h1 class="display-4">Créer un evenement</h1>
   
 <%= form_tag url_for(action: 'create'), method: "post" do %>
