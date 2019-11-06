@@ -5,11 +5,11 @@
   </div>
 </div>
   <p> 
-  Son nom :  <%= @user.last_name %> <%= @user.first_name %><br/>
-  Sa description : <%= @user.description %> <br/>
-  Son mail : <%= @user.email %><br/>
+  Nom :  <%= @user.last_name %> <%= @user.first_name %><br/>
+  Description : <%= @user.description %> <br/>
+  Mail : <%= @user.email %><br/>
   </p>
-   <p>Clique pour crééer un événement</p>
+  
 
   <p> <%=link_to "Créer un événement", new_event_path, class: "btn btn-primary btn-lg" %> </p> <!--  new_event GET    /events/new(.:format)             events#new
 -->
