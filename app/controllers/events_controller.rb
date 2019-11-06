@@ -30,7 +30,7 @@ class EventsController < ApplicationController
     #le code suivant est le code a rentrer dans $ rails c afin de creer en BDD un user test un event test qui a donc ce user associe. et on check si il y les rollbacks et si ca marche bien
     #e = Event.new(blabla)
     #e.save
-    #sil n y a pas de rollbacks notre save est bien effectue et notre @gossip sauve en BDD
+    #sil n y a pas de rollbacks notre save est bien effectue et notre @event sauve en BDD
     @event = Event.new(start_date: params[:start_date], duration: params[:duration], title: params[:title], description: params[:description], price: params[:price], location: params[:location], admin_id: 1)
  #=> {:title=>["must exist"], :title=>["is too short (minimum is 3 characters)"], :content=>["can't be blank"] etc exemple de rollbacks}
 
