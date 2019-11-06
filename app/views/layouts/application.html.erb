@@ -25,9 +25,17 @@
                    <%= link_to "Accueil", events_path, class: "nav-link" %>
                   </li>
                   <li class="nav-item">
-                <%= link_to "Créer un evenement", new_event_path, class: "nav-link" %> <!-- new_event GET    /events/new(.:format)                                                                    events#new
+                    <%= link_to "Créer un evenement", new_event_path, class: "nav-link" %> <!-- new_event GET    /events/new(.:format)                                                                    events#new
  -->
-              </li>
+                 </li>
+                 <li class="nav-item">
+                 <% if user_signed_in?  %> <!-- Si l utilisateur est connecte, alors un onglet profil apparait dans la navbar des quil sera deconnecte, le profil disparatra-->
+
+                  <%= link_to "Mon profil", user_path(current_user.id), class: "nav-link" %> <!--  user GET    /users/:id(.:format)                                                                     users#show
+ 
+ -->            <% end %>
+                </li>
+
                 </ul>
               </div>
 
